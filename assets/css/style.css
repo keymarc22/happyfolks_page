@@ -2148,7 +2148,7 @@ p.terms-txt a,
   03. PRELOAD ANIMATION
   ========================================================================== */
 
-#loading {
+/* #loading {
   background-color: #fff;
   height: 100%;
   width: 100%;
@@ -2175,6 +2175,113 @@ p.terms-txt a,
   margin-left: -30px;
   -webkit-animation: loading-center-absolute 1s infinite;
   animation: loading-center-absolute 1s infinite;
+} */
+
+.preloader-cont{
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.preloader{
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 2rem;
+}
+
+.preloader-cont .preloader .circle-1 {
+  width: 120px;
+  height: 120px;
+  border: 1rem solid var(--grey);
+  border-top-color: transparent;
+}
+.preloader-cont .preloader .circle {
+  position: absolute;
+  border-radius: 50%;
+}
+.preloader-cont .preloader .c-preloader {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+}
+.preloader-cont .preloader .c-0 {
+  background-color: var(--grey);
+}
+.preloader-cont .preloader .c-preloader-1, .c-preloader-4, .c-preloader-6, .c-preloader-5, .circle-1{
+  animation: c1-roll 3s infinite;
+}
+.c-preloader-2, .c-preloader-3 {
+  animation: c2-roll 3s infinite;
+  animation-direction: alternate-reverse;
+}
+.preloader-cont .preloader .circle-2{
+  left: 15px;
+  top: 15px;
+  width: 1.01rem;
+  height: 1.01rem;
+}
+.preloader-cont .preloader .circle-3{
+  left: 39px;
+  top: 1px;
+  width: 1rem;
+  height: 1rem;
+}
+
+.preloader-cont .preloader .circle-4{
+  left: 62px;
+  top: 1px;
+  width: 1rem;
+  height: 1rem;
+}
+
+.preloader-cont .preloader .circle-5{
+  left: 89px;
+  top: 16px;
+  width: 1.01rem;
+  height: 1.01rem;
+}
+
+.preloader-cont .preloader .circle-6{
+  right: 51px;
+  bottom: -1px;
+  width: 1.02rem;
+  height: 1.1rem;
+  background-color: var(--primary-color);
+}
+
+.preloader-cont .preloader .circle-7{
+  left: 47px;
+  bottom: 0px;
+  width: 1.02rem;
+  height: 1.02rem;
+}
+
+@keyframes c1-roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes c2-roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .object {
